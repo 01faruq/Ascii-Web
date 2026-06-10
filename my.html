@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii-Art</title>
+</head>
+<body>
+    <form action="/ascii_art" method="POST">
+        <label for="t">Enter text: </label>
+        <textarea id="t" name="text"></textarea>
+        <div>
+            <label>Select banner: </label>
+            <label for="a">Standard</label>
+            <input id="a" type="radio" name="banner" value="standard.txt" checked>
+            <label for="b">Shadow</label>
+            <input id="b" type="radio" name="banner" value="shadow.txt">
+            <label for="c">Thinkertoy</label>
+            <input id="c" type="radio" name="banner" value="thinkertoy.txt">
+            <label for="c">Dummy Banner</label>
+            <input id="c" type="radio" name="banner" value="">
+        </div>
+        <button>Generate</button>
+    </form>
+    <p>This is you art <pre>{{.}}</pre></p>
+</body>
+</html>
